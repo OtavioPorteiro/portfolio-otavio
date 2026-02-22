@@ -5,11 +5,12 @@
     <title>Otávio Porteiro | Portfólio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color: #ADD8E6; /* azul claro */
+            background: linear-gradient(120deg, #ADD8E6, #ffffff);
+            color: #333;
         }
 
         header {
@@ -23,10 +24,12 @@
             object-fit: cover;
             display: block;
             margin: 0 auto;
+            border: 4px solid #32CD32;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .nome {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
             margin: 15px 0;
         }
@@ -36,14 +39,14 @@
         }
 
         nav button {
-            padding: 10px 20px;
-            margin: 0 5px;
+            padding: 12px 25px;
+            margin: 0 8px;
             font-size: 16px;
             cursor: pointer;
             border: 2px solid #333;
             background-color: white;
-            border-radius: 5px;
-            transition: 0.2s;
+            border-radius: 8px;
+            transition: all 0.3s;
         }
 
         nav button:hover {
@@ -52,70 +55,79 @@
         }
 
         .content {
-            max-width: 700px;
-            margin: 20px auto;
+            max-width: 750px;
+            margin: 30px auto;
             text-align: left;
-            padding: 20px;
+            padding: 25px;
             display: none;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            opacity: 0;
+            transition: opacity 0.6s;
         }
 
         .content.active {
             display: block;
+            opacity: 1;
         }
 
         .sobre-texto {
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 18px;
         }
 
         .curriculo-section {
-            max-width: 700px;
+            max-width: 750px;
             margin: 40px auto;
             padding: 30px;
-            background-color: white;
+            background-color: #32CD32;
             border-radius: 15px;
+            color: white;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
         }
 
         .curriculo-section a {
             display: inline-block;
             margin-top: 20px;
-            padding: 15px 30px;
+            padding: 15px 35px;
             font-size: 18px;
-            color: white;
-            background-color: #32CD32;
+            color: #32CD32;
+            background-color: white;
             border-radius: 10px;
             text-decoration: none;
-            transition: 0.2s;
+            font-weight: bold;
+            transition: all 0.3s;
         }
 
         .curriculo-section a:hover {
-            background-color: #28a428;
+            background-color: #e0e0e0;
         }
 
         .contact-section {
             margin: 50px auto;
             padding: 40px 20px;
-            background-color: #0077B5; /* azul LinkedIn */
+            background-color: #0077B5;
             color: white;
-            max-width: 700px;
+            max-width: 750px;
             border-radius: 15px;
             font-size: 22px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
         }
 
         .contact-section a {
             display: inline-block;
             margin-top: 20px;
-            padding: 15px 25px;
+            padding: 15px 30px;
             font-size: 18px;
             color: white;
             background-color: #0A66C2;
             border-radius: 10px;
             text-decoration: none;
-            transition: 0.2s;
+            font-weight: bold;
+            transition: all 0.3s;
         }
 
         .contact-section a:hover {
@@ -123,8 +135,8 @@
         }
 
         .punchline {
-            margin: 50px 20px 40px 20px;
-            font-size: 20px;
+            margin: 50px 20px 60px 20px;
+            font-size: 22px;
             font-weight: bold;
             color: #333;
         }
@@ -138,40 +150,43 @@
 
         <nav>
             <button onclick="showTab('sobre')">Sobre Mim</button>
-            <button onclick="showTab('habilidades')">Habilidades</button>
+            <button onclick="showTab('curriculo')">Currículo</button>
             <button onclick="showTab('contato')">Contato</button>
         </nav>
     </header>
 
+    <!-- Sobre Mim -->
     <div id="sobre" class="content active">
         <h2>Sobre Mim</h2>
         <div class="sobre-texto">
-            Olá! Sou o Otávio, Muito prazer!<br>
-            18 anos, cabeça aberta e mãos na ação.<br>
-            Aprendendo todo dia, crescendo sempre.<br>
-            Não espero oportunidades… eu crio.
+            Olá! Sou o Otávio, 18 anos, apaixonado por tecnologia e desenvolvimento.<br>
+            Tenho experiência com suporte técnico, manutenção de computadores e fundamentos de programação.<br>
+            Gosto de aprender na prática e transformar desafios em oportunidades.<br>
+            Meu objetivo é criar soluções que façam a diferença no dia a dia das pessoas.
         </div>
-
-    
-        <div id="contato" class="content">
-        <h2>Contato</h2>
-        <p>Email: dsotavioporteiro@outlook.com</p>
     </div>
 
-    <!-- Seção Meu Currículo -->
-    <div class="curriculo-section">
+    <!-- Currículo -->
+    <div id="curriculo" class="content">
         <h2>Meu Currículo</h2>
-        <a href="meucurriculo.pdf" target="_blank">Abrir Currículo</a>
+        <div class="curriculo-section">
+            <p>Confira meu currículo completo e saiba mais sobre minha trajetória.</p>
+            <a href="meucurriculo.pdf" target="_blank">Abrir Currículo</a>
+        </div>
     </div>
 
-    <!-- Seção de contato via LinkedIn -->
-    <div class="contact-section">
-        <div>Visualize meu LinkedIn:</div>
-        <a href="https://www.linkedin.com/in/otavioporteiro" target="_blank">
-            Acessar LinkedIn
-        </a>
+    <!-- Contato -->
+    <div id="contato" class="content">
+        <h2>Contato</h2>
+        <div class="contact-section">
+            <p>Email: dsotavioporteiro@outlook.com</p>
+            <a href="https://www.linkedin.com/in/otavioporteiro" target="_blank">
+                Acessar LinkedIn
+            </a>
+        </div>
     </div>
 
+    <!-- Punchline -->
     <div class="punchline">
         "Legado não se explica — se constrói."
     </div>
