@@ -53,7 +53,7 @@
 
         .content {
             max-width: 700px;
-            margin: 0 auto;
+            margin: 20px auto;
             text-align: left;
             padding: 20px;
             display: none;
@@ -64,6 +64,36 @@
 
         .content.active {
             display: block;
+        }
+
+        .sobre-texto {
+            line-height: 1.6;
+        }
+
+        .curriculo-section {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .curriculo-section a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #32CD32;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .curriculo-section a:hover {
+            background-color: #28a428;
         }
 
         .contact-section {
@@ -103,7 +133,7 @@
 <body>
 
     <header>
-        <img src="foto.jpg?v=1" alt="Foto de Otávio" class="foto">
+        <img src="foto.jpg" alt="Foto de Otávio" class="foto">
         <div class="nome">Otávio Porteiro</div>
 
         <nav>
@@ -115,14 +145,12 @@
 
     <div id="sobre" class="content active">
         <h2>Sobre Mim</h2>
-        <p>
-           <div class="sobre-texto">
-    Olá! Sou o Otávio, Muito prazer!<br>
-    18 anos, cabeça aberta e mãos na ação.<br>
-    Aprendendo todo dia, crescendo sempre.<br>
-    Não espero oportunidades… eu crio.
-</div>
-        </p>
+        <div class="sobre-texto">
+            Olá! Sou o Otávio, Muito prazer!<br>
+            18 anos, cabeça aberta e mãos na ação.<br>
+            Aprendendo todo dia, crescendo sempre.<br>
+            Não espero oportunidades… eu crio.
+        </div>
     </div>
 
     <div id="habilidades" class="content">
@@ -138,6 +166,12 @@
     <div id="contato" class="content">
         <h2>Contato</h2>
         <p>Email: dsotavioporteiro@outlook.com</p>
+    </div>
+
+    <!-- Seção Meu Currículo -->
+    <div class="curriculo-section">
+        <h2>Meu Currículo</h2>
+        <a href="meucurriculo.pdf" target="_blank">Abrir Currículo</a>
     </div>
 
     <!-- Seção de contato via LinkedIn -->
@@ -158,17 +192,6 @@
             document.getElementById(tabId).classList.add('active');
         }
     </script>
-
-</body>
-</html>
-    </script>
-
-</body>
-</html>
-    </script>
-
-</body>
-</html>
 
 </body>
 </html>
