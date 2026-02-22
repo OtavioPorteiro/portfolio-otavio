@@ -3,98 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <title>Otávio Porteiro | Portfólio</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center;
+            background-color: #ADD8E6; /* azul claro */
         }
+
         header {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            background-color: #f0f0f0;
+            padding: 40px 20px 20px 20px;
         }
+
         .foto {
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
             object-fit: cover;
-            margin-right: 20px;
+            display: block;
+            margin: 0 auto;
         }
+
+        .nome {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
         nav {
-            background-color: #333;
-            padding: 10px;
+            margin: 20px 0;
         }
+
         nav button {
-            color: white;
-            background: none;
-            border: none;
-            margin-right: 10px;
+            padding: 10px 20px;
+            margin: 0 5px;
             font-size: 16px;
             cursor: pointer;
+            border: 2px solid #333;
+            background-color: white;
+            border-radius: 5px;
+            transition: 0.2s;
         }
+
         nav button:hover {
-            text-decoration: underline;
+            background-color: #333;
+            color: white;
         }
+
         .content {
-            display: flex;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
             padding: 20px;
+            display: none;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .text-area {
-            max-width: 600px;
-            display: none; /* começa escondido */
+
+        .content.active {
+            display: block;
         }
-        .text-area.active {
-            display: block; /* aparece ao clicar */
+
+        .contact-section {
+            margin: 50px auto;
+            padding: 40px 20px;
+            background-color: #1E90FF; /* azul escuro do botão */
+            color: white;
+            max-width: 700px;
+            border-radius: 15px;
+            font-size: 22px;
+        }
+
+        .contact-section a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 25px;
+            font-size: 18px;
+            color: white;
+            background-color: #32CD32;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .contact-section a:hover {
+            background-color: #28a428;
+        }
+
+        .punchline {
+            margin: 50px 20px 40px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <button onclick="showContent('sobre')">Sobre Mim</button>
-        <button onclick="showContent('habilidades')">Habilidades</button>
-        <button onclick="showContent('contato')">Contato</button>
-    </nav>
-
-    <div class="content">
+    <header>
         <img src="foto.jpg?v=1" alt="Foto de Otávio" class="foto">
+        <div class="nome">Otávio Porteiro</div>
 
-        <!-- Seções de conteúdo -->
-        <div id="sobre" class="text-area active">
-            <h2>Sobre Mim</h2>
-            <p>
-                Olá! Sou Otávio Porteiro, estudante de Desenvolvimento de Sistemas,
-                apaixonado por tecnologia e inovação. Tenho experiência em HTML, CSS e lógica de programação,
-                e busco sempre aprender novas habilidades para crescer na área de TI.
-            </p>
-        </div>
+        <nav>
+            <button onclick="showTab('sobre')">Sobre Mim</button>
+            <button onclick="showTab('habilidades')">Habilidades</button>
+            <button onclick="showTab('contato')">Contato</button>
+        </nav>
+    </header>
 
-        <div id="habilidades" class="text-area">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Lógica de Programação</li>
-                <li>Suporte Técnico</li>
-            </ul>
-        </div>
+    <div id="sobre" class="content active">
+        <h2>Sobre Mim</h2>
+        <p>
+            Olá! Sou Otávio Porteiro, estudante de Desenvolvimento de Sistemas,
+            apaixonado por tecnologia e inovação. Tenho experiência em HTML, CSS e lógica de programação,
+            e busco sempre aprender novas habilidades para crescer na área de TI.
+        </p>
+    </div>
 
-        <div id="contato" class="text-area">
-            <h2>Contato</h2>
-            <p>Email: otavioporteiro61@gmail.com</p>
-        </div>
+    <div id="habilidades" class="content">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Lógica de Programação</li>
+            <li>Suporte Técnico</li>
+        </ul>
+    </div>
+
+    <div id="contato" class="content">
+        <h2>Contato</h2>
+        <p>Email: seuemail@email.com</p>
+    </div>
+
+    <!-- Seção de contato via WhatsApp -->
+    <div class="contact-section">
+        <div>Entre em contato comigo via WhatsApp:</div>
+        <a href="https://wa.me/SEU_NUMERO?text=Ol%C3%A1%20Otavio,%20vim%20do%20Seu%20Site!" target="_blank">
+            Enviar mensagem
+        </a>
+    </div>
+
+    <div class="punchline">
+        "Transformando ideias em soluções de tecnologia!"
     </div>
 
     <script>
-        function showContent(sectionId) {
-            // Esconde todas as seções
-            document.querySelectorAll('.text-area').forEach(el => el.classList.remove('active'));
-            // Mostra apenas a selecionada
-            document.getElementById(sectionId).classList.add('active');
+        function showTab(tabId) {
+            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
         }
+    </script>
+
+</body>
+</html>
     </script>
 
 </body>
