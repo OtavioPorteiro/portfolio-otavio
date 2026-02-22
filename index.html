@@ -4,35 +4,101 @@
     <meta charset="UTF-8">
     <title>Otávio Porteiro | Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .foto {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav button {
+            color: white;
+            background: none;
+            border: none;
+            margin-right: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        nav button:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: flex;
+            padding: 20px;
+        }
+        .text-area {
+            max-width: 600px;
+            display: none; /* começa escondido */
+        }
+        .text-area.active {
+            display: block; /* aparece ao clicar */
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Otávio Porteiro</h1>
+    <nav>
+        <button onclick="showContent('sobre')">Sobre Mim</button>
+        <button onclick="showContent('habilidades')">Habilidades</button>
+        <button onclick="showContent('contato')">Contato</button>
+    </nav>
+
+    <div class="content">
         <img src="foto.jpg?v=1" alt="Foto de Otávio" class="foto">
-        <p>Estudante de Desenvolvimento de Sistemas</p>
-    </header>
-    <section>
-        <h2>Sobre Mim</h2>
-        <p>
-            Sou um profissional dedicado, com experiência em rotinas administrativas e suporte técnico, apaixonado por aprender e crescer em ambientes desafiadores. Tenho habilidades em pacote Office, atendimento ao cliente e organização de processos, sempre buscando eficiência e soluções práticas. Comprometido com o desenvolvimento contínuo, estou pronto para contribuir de forma positiva e inovadora em projetos e equipes.
-        </p>
-    </section>
 
-    <section>
-        <h2>Habilidades</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Lógica de Programação</li>
-            <li>Suporte Técnico</li>
-        </ul>
-    </section>
+        <!-- Seções de conteúdo -->
+        <div id="sobre" class="text-area active">
+            <h2>Sobre Mim</h2>
+            <p>
+                Olá! Sou Otávio Porteiro, estudante de Desenvolvimento de Sistemas,
+                apaixonado por tecnologia e inovação. Tenho experiência em HTML, CSS e lógica de programação,
+                e busco sempre aprender novas habilidades para crescer na área de TI.
+            </p>
+        </div>
 
-    <section>
-        <h2>Contato</h2>
-        <p>Email: seuemail@email.com</p>
-    </section>
+        <div id="habilidades" class="text-area">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Lógica de Programação</li>
+                <li>Suporte Técnico</li>
+            </ul>
+        </div>
+
+        <div id="contato" class="text-area">
+            <h2>Contato</h2>
+            <p>Email: seuemail@email.com</p>
+        </div>
+    </div>
+
+    <script>
+        function showContent(sectionId) {
+            // Esconde todas as seções
+            document.querySelectorAll('.text-area').forEach(el => el.classList.remove('active'));
+            // Mostra apenas a selecionada
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
 
 </body>
 </html>
