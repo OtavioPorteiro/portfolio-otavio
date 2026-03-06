@@ -10,25 +10,3 @@ body {
     color: white;
     text-align: center;
 }
-
-header {
-    background-color: orange;
-    padding: 40px;
-}
-
-section {
-    padding: 40px;
-}
-
-h2 {
-    color: orange;
-}
-
-.foto {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 20px;
-    border: 4px solid white;
-}
