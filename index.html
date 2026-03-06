@@ -1,202 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Otávio Porteiro | Portfólio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background: linear-gradient(120deg, #71b2c8d7, #ffffff);
-            color: #fefefe;
-        }
+<meta charset="UTF-8">
+<title>Otávio Porteiro | Portfólio</title>
 
-        header {
-            padding: 40px 20px 20px 20px;
-        }
+<style>
 
-        .foto {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
-            border: 4px solid #26eb26;
-            box-shadow: 0 4px 12px rgb(0, 0, 0);
-        }
+body{
+font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+text-align:center;
+background:linear-gradient(120deg,#1e3c72,#2a5298);
+color:white;
+}
 
-        .nome {
-            font-size: 32px;
-            font-weight: bold;
-            margin: 15px 0;
-        }
+/* HEADER */
 
-        nav {
-            margin: 20px 0;
-        }
+header{
+padding:40px 20px 20px;
+}
 
-        nav button {
-            padding: 12px 25px;
-            margin: 0 8px;
-            font-size: 16px;
-            cursor: pointer;
-            border: 2px solid #333;
-            background-color: white;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
+.foto{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+margin:auto;
+border:4px solid #2ecc71;
+box-shadow:0 4px 12px rgba(0,0,0,0.4);
+}
 
-        nav button:hover {
-            background-color: #333;
-            color: white;
-        }
+.nome{
+font-size:34px;
+font-weight:bold;
+margin:15px 0;
+}
 
-        .content {
-            max-width: 750px;
-            margin: 30px auto;
-            text-align: left;
-            padding: 25px;
-            display: none;
-            background-color: rgb(207, 177, 79)20.62);
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-            opacity: 0;
-            transition: opacity 0.6s;
-        }
+/* MENU */
 
-        .content.active {
-            display: block;
-            opacity: 1;
-        }
+nav{
+margin:20px 0;
+}
 
-        .sobre-texto {
-            line-height: 1.7;
-            font-size: 18px;
-        }
+nav button{
+padding:12px 25px;
+margin:0 8px;
+font-size:16px;
+cursor:pointer;
+border:none;
+background:white;
+color:#1e3c72;
+border-radius:8px;
+font-weight:bold;
+transition:0.3s;
+}
 
-        .curriculo-section {
-            max-width: 750px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: rgb(53, 47, 136)20.62);
-            border-radius: 15px;
-            color: white;
-            text-align: center;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-        }
+nav button:hover{
+background:#2ecc71;
+color:white;
+}
 
-        .curriculo-section a {
-            display: inline-block;
-            margin-top: 50px auto;
-            padding: 40px 20px;
-            font-size: 18px;
-            color: rgb(53, 47, 136)20.62);
-            background-color: white;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
+/* CONTEÚDO */
 
-        .curriculo-section a:hover {
-            background-color: #e0e0e0;
-        }
+.content{
+max-width:750px;
+margin:30px auto;
+text-align:left;
+padding:25px;
+display:none;
+background:rgba(255,255,255,0.1);
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+opacity:0;
+transform:translateY(10px);
+transition:0.5s;
+}
 
-        .contact-section {
-            margin: 50px auto;
-            padding: 40px 20px;
-            background-color: rgb(53, 47, 136)20.62);
-            color: white;
-            max-width: 750px;
-            border-radius: 15px;
-            font-size: 22px;
-            text-align: center;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-        }
+.content.active{
+display:block;
+opacity:1;
+transform:translateY(0);
+}
 
-        .contact-section a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: #0c76af;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
+h2{
+text-align:center;
+}
 
-        .contact-section a:hover {
-            background-color: #004182;
-        }
+/* SOBRE */
 
-        .punchline {
-            margin: 50px 20px 60px 20px;
-            font-size: 22px;
-            font-weight: bold;
-            color: #333;
-        }
-    </style>
+.sobre-texto{
+line-height:1.7;
+font-size:18px;
+}
+
+/* CURRICULO */
+
+.curriculo-section{
+text-align:center;
+}
+
+.curriculo-section a{
+display:inline-block;
+margin-top:20px;
+padding:15px 25px;
+font-size:18px;
+color:white;
+background:#2ecc71;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.curriculo-section a:hover{
+background:#27ae60;
+}
+
+/* CONTATO */
+
+.contact-section{
+text-align:center;
+}
+
+.contact-section p{
+font-size:18px;
+}
+
+.contact-section a{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+font-size:18px;
+color:white;
+background:#0c76af;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.contact-section a:hover{
+background:#004182;
+}
+
+/* FRASE FINAL */
+
+.punchline{
+margin:50px 20px 60px;
+font-size:22px;
+font-weight:bold;
+color:#2ecc71;
+}
+
+</style>
 </head>
+
 <body>
 
-    <header>
-        <img src="foto.jpg" alt="Foto de Otávio" class="foto">
-        <div class="nome">Otávio Porteiro</div>
+<header>
 
-        <nav>
-            <button onclick="showTab('sobre')">Sobre Mim</button>
-            <button onclick="showTab('curriculo')">Currículo</button>
-            <button onclick="showTab('contato')">Contato</button>
-        </nav>
-    </header>
+<img src="foto.jpg" alt="Foto de Otávio" class="foto">
 
-    <!-- Sobre Mim -->
-    <div id="sobre" class="content active">
-        <h2>Sobre Mim</h2>
-        <div class="sobre-texto">
-            Olá! Sou o Otávio, 18 anos, apaixonado por tecnologia e desenvolvimento.<br>
-            Tenho experiência com suporte técnico, manutenção de computadores e fundamentos de programação.<br>
-            Gosto de aprender na prática e transformar desafios em oportunidades.<br>
-            Meu objetivo é criar soluções que façam a diferença no dia a dia das pessoas.
-        </div>
-    </div>
+<div class="nome">Otávio Porteiro</div>
 
-    <!-- Currículo -->
-    <div id="curriculo" class="content">
-        <h2>Meu Currículo</h2>
-        <div class="curriculo-section">
-            <p>Confira meu currículo completo e saiba mais sobre minha trajetória.</p>
-            <a href="meucurriculo.pdf" target="_blank">Abrir Currículo</a>
-        </div>
-    </div>
+<nav>
+<button onclick="showTab('sobre')">Sobre Mim</button>
+<button onclick="showTab('curriculo')">Currículo</button>
+<button onclick="showTab('contato')">Contato</button>
+</nav>
 
-    <!-- Contato -->
-    <div id="contato" class="content">
-        <h2>Contato</h2>
-        <div class="contact-section">
-            <p>Email: dsotavioporteiro@outlook.com</p>
-            <a href="https://www.linkedin.com/in/otavioporteiro" target="_blank">
-                Acessar LinkedIn
-            </a>
-        </div>
-    </div>
+</header>
 
-    <!-- Punchline -->
-    <div class="punchline">
-        "Legado não se explica — se constrói."
-    </div>
 
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
+<!-- SOBRE -->
+
+<div id="sobre" class="content active">
+
+<h2>Sobre Mim</h2>
+
+<div class="sobre-texto">
+
+Olá! Sou o Otávio, tenho 18 anos e sou apaixonado por tecnologia e desenvolvimento.<br><br>
+
+Tenho experiência com suporte técnico, manutenção de computadores e fundamentos de programação. Gosto de aprender na prática e estou sempre buscando evoluir meus conhecimentos na área de tecnologia.<br><br>
+
+Meu objetivo é crescer profissionalmente em TI e desenvolver soluções que possam facilitar o dia a dia das pessoas.
+
+</div>
+
+</div>
+
+
+<!-- CURRICULO -->
+
+<div id="curriculo" class="content">
+
+<h2>Meu Currículo</h2>
+
+<div class="curriculo-section">
+
+<p>Confira meu currículo completo e saiba mais sobre minha trajetória profissional.</p>
+
+<a href="meucurriculo.pdf" target="_blank">
+Abrir Currículo
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CONTATO -->
+
+<div id="contato" class="content">
+
+<h2>Contato</h2>
+
+<div class="contact-section">
+
+<p>Email: dsotavioporteiro@outlook.com</p>
+
+<a href="https://www.linkedin.com/in/otavioporteiro" target="_blank">
+Acessar LinkedIn
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FRASE -->
+
+<div class="punchline">
+"Transformando curiosidade em conhecimento."
+</div>
+
+
+<script>
+
+function showTab(tabId){
+
+document.querySelectorAll('.content')
+.forEach(el=>el.classList.remove('active'));
+
+document.getElementById(tabId)
+.classList.add('active');
+
+}
+
+</script>
+
 
 </body>
 </html>
