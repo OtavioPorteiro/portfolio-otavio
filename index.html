@@ -15,10 +15,8 @@
 }
 
 /* BODY */
-
 body {
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
     background: #0a0a0a;
     color: white;
     text-align: center;
@@ -26,7 +24,6 @@ body {
 }
 
 /* FUNDO PARTÍCULAS */
-
 #particles {
     position: fixed;
     width: 100%;
@@ -36,19 +33,11 @@ body {
 }
 
 /* HEADER */
-
 header {
     padding: 40px 20px;
-    animation: fadeDown 1s ease;
-}
-
-@keyframes fadeDown {
-    from {opacity:0; transform: translateY(-20px);}
-    to {opacity:1; transform: translateY(0);}
 }
 
 /* FOTO */
-
 .foto {
     width: 170px;
     height: 170px;
@@ -56,20 +45,17 @@ header {
     border: 3px solid #00ffcc;
     transition: 0.4s;
 }
-
 .foto:hover {
     transform: scale(1.08);
 }
 
 /* NOME */
-
 .nome {
     font-size: 32px;
     margin: 15px 0;
 }
 
 /* NAV */
-
 nav {
     position: sticky;
     top: 10px;
@@ -99,7 +85,6 @@ nav button:hover {
 }
 
 /* CONTEÚDO */
-
 .content {
     max-width: 750px;
     margin: 30px auto;
@@ -108,7 +93,6 @@ nav button:hover {
     background: rgba(255,255,255,0.05);
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    transition: 0.4s;
 }
 
 .content.active {
@@ -126,7 +110,6 @@ nav button:hover {
 }
 
 /* TITULOS */
-
 h2 {
     margin-bottom: 15px;
     border-bottom: 2px solid #00ffcc;
@@ -134,7 +117,6 @@ h2 {
 }
 
 /* BOTÕES */
-
 .btn {
     display: inline-block;
     margin-top: 15px;
@@ -151,7 +133,6 @@ h2 {
 }
 
 /* FRASE */
-
 .punchline {
     margin: 50px;
     color: #00ffcc;
@@ -216,8 +197,7 @@ function showTab(tabId){
     .classList.add('active');
 }
 
-/* PARTÍCULAS SIMPLES */
-
+/* PARTÍCULAS */
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
 document.getElementById("particles").appendChild(canvas);
