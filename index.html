@@ -2,157 +2,160 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Otávio Porteiro | Portfólio</title>
 
 <style>
 
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
 body {
-    background: 
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("computador.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background: #0a0a0a;
     color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* FUNDO PARTÍCULAS */
+
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #111 0%, #000 100%);
+    z-index: -1;
 }
 
 /* HEADER */
 
-header{
-padding:40px 20px 20px;
+header {
+    padding: 40px 20px;
+    animation: fadeDown 1s ease;
 }
 
-.foto{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-display:block;
-margin:auto;
-border:4px solid #2ecc71;
-box-shadow:0 4px 12px rgba(0,0,0,0.4);
+@keyframes fadeDown {
+    from {opacity:0; transform: translateY(-20px);}
+    to {opacity:1; transform: translateY(0);}
 }
 
-.nome{
-font-size:34px;
-font-weight:bold;
-margin:15px 0;
+/* FOTO */
+
+.foto {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 3px solid #00ffcc;
+    transition: 0.4s;
 }
 
-/* MENU */
-
-nav{
-margin:20px 0;
+.foto:hover {
+    transform: scale(1.08);
 }
 
-nav button{
-padding:12px 25px;
-margin:0 8px;
-font-size:16px;
-cursor:pointer;
-border:none;
-background:white;
-color:#1e3c72;
-border-radius:8px;
-font-weight:bold;
-transition:0.3s;
+/* NOME */
+
+.nome {
+    font-size: 32px;
+    margin: 15px 0;
 }
 
-nav button:hover{
-background:#2ecc71;
-color:white;
+/* NAV */
+
+nav {
+    position: sticky;
+    top: 10px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 12px;
+    width: fit-content;
+    margin: auto;
+}
+
+nav button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #111;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #00ffcc;
+    color: black;
+    transform: translateY(-2px);
 }
 
 /* CONTEÚDO */
 
-.content{
-max-width:750px;
-margin:30px auto;
-text-align:left;
-padding:25px;
-display:none;
-background:rgba(255,255,255,0.1);
-border-radius:15px;
-box-shadow:0 6px 15px rgba(0,0,0,0.2);
-opacity:0;
-transform:translateY(10px);
-transition:0.5s;
+.content {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 25px;
+    display: none;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
 }
 
-.content.active{
-display:block;
-opacity:1;
-transform:translateY(0);
+.content.active {
+    display: block;
+    animation: fadeUp 0.6s ease;
 }
 
-h2{
-text-align:center;
+@keyframes fadeUp {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
 }
 
-/* SOBRE */
-
-.sobre-texto{
-line-height:1.7;
-font-size:18px;
+.content:hover {
+    transform: translateY(-5px);
 }
 
-/* CURRICULO */
+/* TITULOS */
 
-.curriculo-section{
-text-align:center;
+h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00ffcc;
+    display: inline-block;
 }
 
-.curriculo-section a{
-display:inline-block;
-margin-top:20px;
-padding:15px 25px;
-font-size:18px;
-color:white;
-background:#2ecc71;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
+/* BOTÕES */
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #00ffcc;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.curriculo-section a:hover{
-background:#27ae60;
+.btn:hover {
+    background: #00c9a7;
 }
 
-/* CONTATO */
+/* FRASE */
 
-.contact-section{
-text-align:center;
-}
-
-.contact-section p{
-font-size:18px;
-}
-
-.contact-section a{
-display:inline-block;
-margin-top:20px;
-padding:15px 30px;
-font-size:18px;
-color:white;
-background:#0c76af;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.contact-section a:hover{
-background:#004182;
-}
-
-/* FRASE FINAL */
-
-.punchline{
-margin:50px 20px 60px;
-font-size:22px;
-font-weight:bold;
-color:#2ecc71;
+.punchline {
+    margin: 50px;
+    color: #00ffcc;
+    font-size: 22px;
 }
 
 </style>
@@ -160,102 +163,97 @@ color:#2ecc71;
 
 <body>
 
+<div id="particles"></div>
+
 <header>
 
-<img src="foto.jpg" alt="Foto de Otávio" class="foto">
+<img src="foto.jpg" class="foto">
 
 <div class="nome">Otávio Porteiro</div>
 
 <nav>
-<button onclick="showTab('sobre')">Sobre Mim</button>
+<button onclick="showTab('sobre')">Sobre</button>
 <button onclick="showTab('curriculo')">Currículo</button>
 <button onclick="showTab('contato')">Contato</button>
 </nav>
 
 </header>
 
-
 <!-- SOBRE -->
-
 <div id="sobre" class="content active">
-
-<h2>Sobre Mim</h2>
-
-<div class="sobre-texto">
-
-Tenho 18 anos e estou no início da minha jornada profissional, sempre buscando aprender, evoluir e desenvolver novas habilidades. Atualmente estou estudando e praticando HTML e CSS, dando meus primeiros passos no desenvolvimento web e entendendo como criar e estruturar páginas na internet.<br><br>
-
-Este site faz parte da minha jornada de aprendizado e desenvolvimento, onde compartilho um pouco sobre mim, e minha evolução na área de tecnologia.<br><br>
-
-<center>Acompanhe a Tragetória de um Futuro Desenvolvedor!</center>
-
+<h2>Sobre</h2>
+<p>
+Tenho 18 anos e estou evoluindo na área de tecnologia, estudando desenvolvimento web e construindo projetos reais.
+</p>
 </div>
-
-</div>
-
 
 <!-- CURRICULO -->
-
 <div id="curriculo" class="content">
-
-<h2>Meu Currículo</h2>
-
-<div class="curriculo-section">
-
-<p>Confira meu currículo completo e saiba mais sobre minha trajetória profissional.</p>
-
-<a href="OTAVIO PORTEIRO.pdf" target="_blank">
- Currículo
-</a>
-
+<h2>Currículo</h2>
+<a href="OTAVIO PORTEIRO.pdf" target="_blank" class="btn">Abrir Currículo</a>
 </div>
-
-</div>
-
 
 <!-- CONTATO -->
-
 <div id="contato" class="content">
-
 <h2>Contato</h2>
-
-<div class="contact-section">
-
-
-<a href="https://www.linkedin.com/in/otavioporteiro" target="_blank">
- LinkedIn
-</a>
-
+<a href="https://www.linkedin.com/in/otavioporteiro" target="_blank" class="btn">LinkedIn</a>
 <br><br>
-
-<a href="https://github.com/otavioporteiro" target="_blank">
- GitHub
-</a>
-
+<a href="https://github.com/otavioporteiro" target="_blank" class="btn">GitHub</a>
 </div>
-
-</div>
-
-
-<!-- FRASE -->
 
 <div class="punchline">
 "Legado não se explica — se constrói."
-<p>Email: dsotavioporteiro@outlook.com</p>
 </div>
-
 
 <script>
 
+/* TABS */
 function showTab(tabId){
+    document.querySelectorAll('.content')
+    .forEach(el => el.classList.remove('active'));
 
-document.querySelectorAll('.content')
-.forEach(el => el.classList.remove('active'));
-
-document.getElementById(tabId)
-.classList.add('active');
-
+    document.getElementById(tabId)
+    .classList.add('active');
 }
+
+/* PARTÍCULAS SIMPLES */
+
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+document.getElementById("particles").appendChild(canvas);
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<80;i++){
+    particles.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        r: Math.random()*2,
+        dx: (Math.random()-0.5),
+        dy: (Math.random()-0.5)
+    });
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p=>{
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle="#00ffcc";
+        ctx.fill();
+
+        p.x+=p.dx;
+        p.y+=p.dy;
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
 
 </script>
 
