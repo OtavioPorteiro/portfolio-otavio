@@ -1,142 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Otávio Porteiro | Portfólio</title>
 
 <style>
 
 /* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 /* BODY */
-body {
-    font-family: Arial, sans-serif;
-    background: #0a0a0a;
-    color: white;
-    text-align: center;
-    overflow-x: hidden;
+body{
+    font-family:Arial,sans-serif;
+    background:#0a0a0a;
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
 }
 
-/* FUNDO PARTÍCULAS */
-#particles {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #111 0%, #000 100%);
-    z-index: -1;
+/* FUNDO */
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:radial-gradient(circle,#111 0%,#000 100%);
+    z-index:-1;
 }
 
 /* HEADER */
-header {
-    padding: 40px 20px;
+header{
+    padding:40px 20px;
 }
 
 /* FOTO */
-.foto {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    border: 3px solid #00ffcc;
-    transition: 0.4s;
+.foto{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    border:3px solid #00ffcc;
+    object-fit:cover;
+    box-shadow:0 0 25px #00ffcc;
+    transition:.4s;
 }
-.foto:hover {
-    transform: scale(1.08);
+
+.foto:hover{
+    transform:scale(1.08);
 }
 
 /* NOME */
-.nome {
-    font-size: 32px;
-    margin: 15px 0;
+.nome{
+    font-size:32px;
+    margin-top:15px;
+    min-height:40px;
 }
 
-/* NAV */
-nav {
-    position: sticky;
-    top: 10px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    padding: 10px;
-    border-radius: 12px;
-    width: fit-content;
-    margin: auto;
+.cargo{
+    color:#00ffcc;
+    margin-top:10px;
+    font-size:18px;
 }
 
-nav button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    background: #111;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
+/* MENU */
+nav{
+    position:sticky;
+    top:10px;
+    background:rgba(0,0,0,.6);
+    backdrop-filter:blur(10px);
+    padding:10px;
+    border-radius:12px;
+    width:fit-content;
+    margin:25px auto;
 }
 
-nav button:hover {
-    background: #00ffcc;
-    color: black;
-    transform: translateY(-2px);
+nav button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    background:#111;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+nav button:hover{
+    background:#00ffcc;
+    color:black;
+    transform:translateY(-2px);
 }
 
 /* CONTEÚDO */
-.content {
-    max-width: 750px;
-    margin: 30px auto;
-    padding: 25px;
-    display: none;
-    background: rgba(255,255,255,0.05);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+.content{
+    max-width:750px;
+    margin:30px auto;
+    padding:25px;
+    display:none;
+    background:rgba(255,255,255,.05);
+    border-radius:15px;
+    backdrop-filter:blur(10px);
 }
 
-.content.active {
-    display: block;
-    animation: fadeUp 0.6s ease;
+.content.active{
+    display:block;
+    animation:fadeUp .6s ease;
 }
 
-@keyframes fadeUp {
-    from {opacity:0; transform: translateY(20px);}
-    to {opacity:1; transform: translateY(0);}
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-.content:hover {
-    transform: translateY(-5px);
+.content:hover{
+    transform:translateY(-5px);
 }
 
 /* TITULOS */
-h2 {
-    margin-bottom: 15px;
-    border-bottom: 2px solid #00ffcc;
-    display: inline-block;
+h2{
+    margin-bottom:15px;
+    border-bottom:2px solid #00ffcc;
+    display:inline-block;
+}
+
+h3{
+    margin-top:20px;
+    color:#00ffcc;
 }
 
 /* BOTÕES */
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #00ffcc;
-    color: black;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s;
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#00ffcc;
+    color:black;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:bold;
 }
 
-.btn:hover {
-    background: #00c9a7;
+.btn:hover{
+    background:#00c9a7;
+}
+
+/* HABILIDADES */
+.skills{
+    margin-top:20px;
+    line-height:2;
 }
 
 /* FRASE */
-.punchline {
-    margin: 50px;
-    color: #00ffcc;
-    font-size: 22px;
+.punchline{
+    margin:50px;
+    color:#00ffcc;
+    font-size:22px;
+}
+
+/* FOOTER */
+footer{
+    margin-top:50px;
+    padding:20px;
+    color:#888;
 }
 
 </style>
@@ -148,12 +185,17 @@ h2 {
 
 <header>
 
-<img src="foto.jpg" class="foto">
+<img src="foto.jpg" class="foto" alt="Otávio Porteiro">
 
-<div class="nome">Otávio Porteiro</div>
+<div class="nome" id="nome"></div>
+
+<div class="cargo">
+Tecnologia • Dados • Automação
+</div>
 
 <nav>
 <button onclick="showTab('sobre')">Sobre</button>
+<button onclick="showTab('projetos')">Projetos</button>
 <button onclick="showTab('curriculo')">Currículo</button>
 <button onclick="showTab('contato')">Contato</button>
 </nav>
@@ -162,44 +204,124 @@ h2 {
 
 <!-- SOBRE -->
 <div id="sobre" class="content active">
+
 <h2>Sobre</h2>
+
 <p>
-Tenho 18 anos e estou evoluindo na área de tecnologia, estudando desenvolvimento web e construindo projetos reais.
+Sou Otávio Porteiro, estudante e profissional em desenvolvimento na área de Tecnologia.
+
+Atualmente atuo como Jovem Aprendiz na PremierPet, desenvolvendo habilidades em análise de dados, Excel, Power BI e automação de processos.
+
+Busco oportunidades para crescer nas áreas de tecnologia, dados e desenvolvimento, transformando problemas em soluções práticas.
 </p>
+
+<div class="skills">
+<strong>Habilidades:</strong><br>
+Excel • Power BI • Power Query • VBA • HTML • CSS • JavaScript
+</div>
+
+</div>
+
+<!-- PROJETOS -->
+<div id="projetos" class="content">
+
+<h2>Projetos</h2>
+
+<h3>Dashboard de Produção</h3>
+<p>
+Desenvolvimento de dashboards para acompanhamento de indicadores produtivos e tomada de decisão.
+</p>
+
+<h3>Automação de Processos</h3>
+<p>
+Automação de lançamentos e controles utilizando Excel VBA e Power Query.
+</p>
+
+<h3>Análise de Dados</h3>
+<p>
+Criação de relatórios e indicadores para monitoramento de desempenho operacional.
+</p>
+
 </div>
 
 <!-- CURRICULO -->
 <div id="curriculo" class="content">
+
 <h2>Currículo</h2>
-<a href="OTAVIO PORTEIRO.pdf" target="_blank" class="btn">Abrir Currículo</a>
+
+<p>
+Clique abaixo para visualizar meu currículo completo.
+</p>
+
+<a href="OTAVIO PORTEIRO.pdf" target="_blank" class="btn">
+Abrir Currículo
+</a>
+
 </div>
 
 <!-- CONTATO -->
 <div id="contato" class="content">
+
 <h2>Contato</h2>
-<a href="https://www.linkedin.com/in/otavioporteiro" target="_blank" class="btn">LinkedIn</a>
+
+<a href="https://www.linkedin.com/in/otavioporteiro" target="_blank" class="btn">
+LinkedIn
+</a>
+
 <br><br>
-<a href="https://github.com/otavioporteiro" target="_blank" class="btn">GitHub</a>
+
+<a href="https://github.com/otavioporteiro" target="_blank" class="btn">
+GitHub
+</a>
+
 </div>
 
 <div class="punchline">
-"Legado não se explica — se constrói."
+"Legado não se explica. Se constrói."
 </div>
+
+<footer>
+© 2026 Otávio Porteiro | Desenvolvido por mim.
+</footer>
 
 <script>
 
-/* TABS */
+/* MENU */
 function showTab(tabId){
-    document.querySelectorAll('.content')
-    .forEach(el => el.classList.remove('active'));
 
-    document.getElementById(tabId)
-    .classList.add('active');
+document.querySelectorAll('.content')
+.forEach(el => el.classList.remove('active'));
+
+document.getElementById(tabId)
+.classList.add('active');
+
 }
 
+/* DIGITAÇÃO */
+const texto = "Otávio Porteiro";
+let i = 0;
+
+function escrever(){
+
+if(i < texto.length){
+
+document.getElementById("nome").innerHTML += texto.charAt(i);
+
+i++;
+
+setTimeout(escrever,100);
+
+}
+
+}
+
+escrever();
+
 /* PARTÍCULAS */
+
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
+
 document.getElementById("particles").appendChild(canvas);
 
 canvas.width = window.innerWidth;
@@ -208,32 +330,53 @@ canvas.height = window.innerHeight;
 let particles = [];
 
 for(let i=0;i<80;i++){
-    particles.push({
-        x: Math.random()*canvas.width,
-        y: Math.random()*canvas.height,
-        r: Math.random()*2,
-        dx: (Math.random()-0.5),
-        dy: (Math.random()-0.5)
-    });
+
+particles.push({
+
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2+1,
+dx:(Math.random()-0.5),
+dy:(Math.random()-0.5)
+
+});
+
 }
 
 function animate(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
 
-    particles.forEach(p=>{
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fillStyle="#00ffcc";
-        ctx.fill();
+ctx.clearRect(0,0,canvas.width,canvas.height);
 
-        p.x+=p.dx;
-        p.y+=p.dy;
-    });
+particles.forEach(p=>{
 
-    requestAnimationFrame(animate);
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="#00ffcc";
+ctx.fill();
+
+p.x+=p.dx;
+p.y+=p.dy;
+
+if(p.x < 0 || p.x > canvas.width)
+p.dx *= -1;
+
+if(p.y < 0 || p.y > canvas.height)
+p.dy *= -1;
+
+});
+
+requestAnimationFrame(animate);
+
 }
 
 animate();
+
+window.addEventListener("resize",()=>{
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+});
 
 </script>
 
