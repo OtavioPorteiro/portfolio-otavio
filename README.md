@@ -10,8 +10,8 @@ Hoje, estou explorando o mundo da programação, criando sites, automatizando pr
 
 ### 🚀 Um pouco do que ando fazendo
 
-- 🐾 **FindPet:** uma ideia que busca conectar animais perdidos aos seus tutores.
-- 🔐 **Controle de Armários:** um sistema para organizar e facilitar o controle de armários na empresa.
+- 🐾 **FindPet:** projeto para portifolio, uma ideia que busca conectar animais perdidos aos seus tutores.
+- 🔐 **Controle de Armários:** um sistema para organizar e facilitar o controle de armários na empresa que atuo.
 - 📊 **Automação e dados:** projetos envolvendo Excel, VBA, Power Query e melhoria de processos.
 
 ### 🧠 O que me move?
