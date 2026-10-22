@@ -2,10 +2,6 @@
 
 Sou estudante de Análise e Desenvolvimento de Sistemas e um cara que gosta de aprender coisas novas, resolver problemas e transformar ideias em projetos de verdade.
 
-Atualmente, trabalho como Jovem Aprendiz na PremierPet, onde tenho contato com processos administrativos, planilhas, organização de informações e melhorias no dia a dia. Foi nesse ambiente que comecei a enxergar como a tecnologia pode facilitar muita coisa.
-
-E foi aí que a curiosidade virou vontade de desenvolver.
-
 Hoje, estou explorando o mundo da programação, criando sites, automatizando processos e tentando entender cada vez mais como as coisas funcionam por trás da tela. Nem sempre sei fazer tudo de primeira, mas gosto justamente do desafio de aprender algo novo e conseguir colocar em prática depois.
 
 ### 🚀 Um pouco do que ando fazendo
