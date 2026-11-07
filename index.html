@@ -7,368 +7,490 @@
 
 <title>Otávio Porteiro | Portfólio</title>
 
-<style>
-
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/* BODY */
-body{
-    font-family:Arial,sans-serif;
-    background:#0a0a0a;
-    color:white;
-    text-align:center;
-    overflow-x:hidden;
-}
-
-/* FUNDO */
-#particles{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:radial-gradient(circle,#111 0%,#000 100%);
-    z-index:-1;
-}
-
-/* HEADER */
-header{
-    padding:40px 20px;
-}
-
-/* FOTO */
-.foto{
-    width:170px;
-    height:170px;
-    border-radius:50%;
-    border:3px solid #00ffcc;
-    object-fit:cover;
-    box-shadow:0 0 25px #00ffcc;
-    transition:.4s;
-}
-
-.foto:hover{
-    transform:scale(1.08);
-}
-
-/* NOME */
-.nome{
-    font-size:32px;
-    margin-top:15px;
-    min-height:40px;
-}
-
-.cargo{
-    color:#00ffcc;
-    margin-top:10px;
-    font-size:18px;
-}
-
-/* MENU */
-nav{
-    position:sticky;
-    top:10px;
-    background:rgba(0,0,0,.6);
-    backdrop-filter:blur(10px);
-    padding:10px;
-    border-radius:12px;
-    width:fit-content;
-    margin:25px auto;
-}
-
-nav button{
-    padding:10px 20px;
-    margin:5px;
-    border:none;
-    background:#111;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-nav button:hover{
-    background:#00ffcc;
-    color:black;
-    transform:translateY(-2px);
-}
-
-/* CONTEÚDO */
-.content{
-    max-width:750px;
-    margin:30px auto;
-    padding:25px;
-    display:none;
-    background:rgba(255,255,255,.05);
-    border-radius:15px;
-    backdrop-filter:blur(10px);
-}
-
-.content.active{
-    display:block;
-    animation:fadeUp .6s ease;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.content:hover{
-    transform:translateY(-5px);
-}
-
-/* TITULOS */
-h2{
-    margin-bottom:15px;
-    border-bottom:2px solid #00ffcc;
-    display:inline-block;
-}
-
-h3{
-    margin-top:20px;
-    color:#00ffcc;
-}
-
-/* BOTÕES */
-.btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:12px 25px;
-    background:#00ffcc;
-    color:black;
-    border-radius:10px;
-    text-decoration:none;
-    transition:.3s;
-    font-weight:bold;
-}
-
-.btn:hover{
-    background:#00c9a7;
-}
-
-/* HABILIDADES */
-.skills{
-    margin-top:20px;
-    line-height:2;
-}
-
-/* FRASE */
-.punchline{
-    margin:50px;
-    color:#00ffcc;
-    font-size:22px;
-}
-
-/* FOOTER */
-footer{
-    margin-top:50px;
-    padding:20px;
-    color:#888;
-}
-
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="particles"></div>
-
 <header>
-
-<img src="foto.jpg" class="foto" alt="Otávio Porteiro">
-
-<div class="nome" id="nome"></div>
-
-<div class="cargo">
-Tecnologia • Dados • Automação
+<div class="header-identity-slot" id="header-identity-slot">
+<div class="about-intro about-reveal" id="profile-identity">
+<h1 class="about-name">Otávio Porteiro</h1>
+<p class="cargo">Sistemas de gestão · Dados · Automação</p>
 </div>
-
-<nav>
-<button onclick="showTab('sobre')">Sobre</button>
-<button onclick="showTab('projetos')">Projetos</button>
-<button onclick="showTab('contato')">Contato</button>
+</div>
+<nav role="tablist" aria-label="Navegação do portfólio">
+<button type="button" id="tab-projetos" role="tab" aria-controls="projetos" aria-selected="true" tabindex="0" onclick="showTab('projetos')">Projetos</button>
+<button type="button" id="tab-sobre" role="tab" aria-controls="sobre" aria-selected="false" tabindex="-1" onclick="showTab('sobre')">Sobre mim</button>
 </nav>
-
 </header>
 
+<main>
 <!-- SOBRE -->
-<div id="sobre" class="content active">
+<section id="sobre" class="content about-section" role="tabpanel" aria-labelledby="tab-sobre" tabindex="0" hidden>
 
-<h2>Sobre</h2>
+<div class="about-identity-slot" id="about-identity-slot"></div>
 
+<div class="about-layout">
+<img src="foto.jpg" class="about-photo about-reveal" alt="Otávio Porteiro">
+<div class="about-copy about-reveal">
+<h2>Sobre mim</h2>
 <p>
-Sou Otávio Porteiro, estudante e profissional em desenvolvimento na área de Tecnologia.
-
-Desenvolvendo habilidades em análise de dados, Excel, Power BI e automação de processos.
-
-Busco oportunidades para crescer nas áreas de tecnologia, dados e desenvolvimento, transformando problemas em soluções práticas.
+Sou estudante de Análise e Desenvolvimento de Sistemas. Neste portfólio, reúno projetos de gestão de armários, identificação de pets e acompanhamento da produção, além de trabalhos com automação e dados.
 </p>
 
 <div class="skills">
 <strong>Habilidades:</strong><br>
-Excel • Power BI • Power Query • PowerApps • VBA • HTML • CSS • JavaScript 
+Excel • Power BI • Power Query • PowerApps • VBA • HTML • CSS • JavaScript
 </div>
 </div>
-
 </div>
+<p class="legacy-quote">"Legado não se explica. Se constrói."</p>
+<button type="button" class="contact-trigger" id="contact-open" aria-haspopup="dialog" aria-controls="contact-modal">
+Entrar em contato <span aria-hidden="true">↗</span>
+</button>
+</section>
 
 <!-- PROJETOS -->
-<div id="projetos" class="content">
+<section id="projetos" class="content active" role="tabpanel" aria-labelledby="tab-projetos" tabindex="0">
 
-<h2>Projetos</h2>
+<h2>Projetos em Destaque</h2>
 
-<h3>Dashboard de Produção</h3>
-<p>
-Desenvolvimento de dashboards para acompanhamento de indicadores produtivos e tomada de decisão.
-</p>
+<article class="project-card">
+<div class="project-card-heading">
+<span class="project-index" aria-hidden="true">01</span>
+<span class="project-category">Gestão de armários</span>
+</div>
+<div class="project-card-content">
+<h3>Controle de Armários</h3>
+<p class="project-description">Sistema de gestão de armários corporativos, com controle de ocupação, movimentações, consulta de colaboradores e acompanhamento de status.</p>
+<ul class="project-technologies" aria-label="Versão atual do projeto"><li>Sistema web</li></ul>
+<button type="button" class="project-card-action" aria-label="Conhecer projeto Controle de Armários" aria-haspopup="dialog" aria-controls="project-modal" data-project-id="controle-armarios">Conhecer projeto <span aria-hidden="true">→</span></button>
+</div>
+</article>
 
-<h3>Aplicativo de Gestão</h3>
-<p>
-Um projeto desenvolvido em Power Apps para facilitar o controle e a gestão de armários, centralizando consultas, entregas, devoluções e registros em uma única solução.
-</p>
+<article class="project-card">
+<div class="project-card-heading">
+<span class="project-index" aria-hidden="true">02</span>
+<span class="project-category">Identificação de pets</span>
+</div>
+<div class="project-card-content">
+<h3>FindPet</h3>
+<p class="project-description">Plataforma de identificação de animais por QR Code, com perfil do pet, ativação de coleiras e recursos de conexão entre tutores e comunidade.</p>
+<button type="button" class="project-card-action" aria-label="Conhecer projeto FindPet" aria-haspopup="dialog" aria-controls="project-modal" data-project-id="findpet">Conhecer projeto <span aria-hidden="true">→</span></button>
+</div>
+</article>
 
-<h3>Automação de Processos</h3>
-<p>
-Automação de lançamentos e controles utilizando Excel VBA e Power Query.
-</p>
+<article class="project-card">
+<div class="project-card-heading">
+<span class="project-index" aria-hidden="true">03</span>
+<span class="project-category">Acompanhamento da produção</span>
+</div>
+<div class="project-card-content">
+<h3>Mix de Ensaque</h3>
+<p class="project-description">Sistema de acompanhamento e fechamento da produção, com consulta de OPs, informações de produção e controle de perdas.</p>
+<button type="button" class="project-card-action" aria-label="Conhecer projeto Mix de Ensaque" aria-haspopup="dialog" aria-controls="project-modal" data-project-id="mix-ensaque">Conhecer projeto <span aria-hidden="true">→</span></button>
+</div>
+</article>
 
-<h3>Análise de Dados</h3>
-<p>
-Criação de relatórios e indicadores para monitoramento de desempenho operacional.
-</p>
+</section>
 
+</main>
+
+<dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
+<div class="project-modal-panel">
+<button class="project-modal-close" id="project-modal-close" type="button" aria-label="Fechar detalhes do projeto">
+<span aria-hidden="true">×</span>
+</button>
+<p class="project-modal-eyebrow">Detalhes do projeto</p>
+<h2 id="project-modal-title" tabindex="-1"></h2>
+<section class="process-transformation" id="armarios-transformation" aria-labelledby="armarios-transformation-title" hidden>
+<h3 id="armarios-transformation-title">A transformação do processo</h3>
+<p class="process-introduction">Antes do sistema, o controle era feito em uma planilha desorganizada, o que dificultava consultar, organizar e acompanhar as informações. O Controle de Armários foi desenvolvido para melhorar esse processo.</p>
+
+<div class="process-comparison">
+<article class="process-stage process-stage-before">
+<div class="process-stage-heading">
+<span class="process-stage-label">Antes</span>
+<h4>Planilha desorganizada</h4>
+</div>
+<p class="process-disclaimer">Representação ilustrativa. Todos os dados abaixo são fictícios.</p>
+<div class="spreadsheet-frame">
+<table class="spreadsheet-illustration">
+<caption>Exemplo ilustrativo com identificadores e dados fictícios, sem informações reais de colaboradores.</caption>
+<thead>
+<tr>
+<th scope="col">Armário</th>
+<th scope="col">Colaborador</th>
+<th scope="col">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-01</td>
+<td>Pessoa fictícia 01</td>
+<td>ocupado</td>
+</tr>
+<tr>
+<td>Arm. 02</td>
+<td>Pessoa fictícia 02</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Pessoa fictícia 03</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+
+<div class="process-transition" aria-hidden="true">→</div>
+
+<article class="process-stage process-stage-after">
+<div class="process-stage-heading">
+<span class="process-stage-label">Depois</span>
+<h4>Controle de Armários</h4>
+</div>
+<div class="process-capture-slot">
+<span class="capture-slot-mark" aria-hidden="true">＋</span>
+<p>Espaço reservado para uma captura real do sistema.</p>
+</div>
+<p class="process-disclaimer">Nenhuma imagem ilustrativa está sendo apresentada como captura do sistema.</p>
+</article>
 </div>
 
-<!-- CONTATO -->
-<div id="contato" class="content">
-
-    <h2>Contato</h2>
-
-    <div class="contato-links">
-
-        <a href="https://www.linkedin.com/in/otavioporteiro" target="_blank" class="btn">
-            LinkedIn
-        </a>
-
-        <a href="https://github.com/otavioporteiro" target="_blank" class="btn">
-            GitHub
-        </a>
-
-    </div>
-
+<div class="process-solution-summary">
+<h4>Solução desenvolvida</h4>
+<p>O sistema foi desenvolvido para facilitar a consulta, a organização e o acompanhamento das informações dos armários.</p>
 </div>
-
-<div class="punchline">
-"Legado não se explica. Se constrói."
+</section>
+<section class="project-evolution" id="armarios-evolution" aria-labelledby="armarios-evolution-title" hidden>
+<h3 id="armarios-evolution-title">Duas etapas do projeto</h3>
+<div class="project-evolution-grid">
+<article class="project-evolution-stage project-evolution-previous">
+<p class="project-evolution-label">Etapa anterior</p>
+<h4>Power Apps</h4>
+<p>A proposta inicial foi criar uma solução para organizar o controle de armários e seus registros. O Power Apps foi utilizado nessa primeira versão, trazendo a experiência inicial de desenvolver uma ferramenta digital para o processo e servindo de ponto de partida para a evolução do projeto.</p>
+</article>
+<article class="project-evolution-stage project-evolution-current">
+<p class="project-evolution-label">Versão atual</p>
+<h4>Sistema web</h4>
+<p>O projeto evoluiu para um site próprio, com interface dedicada e proposta de centralizar as operações e funcionalidades, organizando e facilitando a consulta das informações dos armários.</p>
+<p class="project-evolution-note">A stack técnica da versão web não está especificada nos arquivos disponíveis do portfólio.</p>
+</article>
 </div>
+</section>
+<div class="project-modal-content" id="project-modal-content"></div>
+<section class="project-modal-gallery" id="project-modal-gallery" aria-labelledby="project-modal-gallery-title" hidden>
+<h3 id="project-modal-gallery-title">Capturas de tela</h3>
+<div class="project-gallery-grid" id="project-gallery-grid"></div>
+</section>
+</div>
+</dialog>
+
+<dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-modal-title" aria-describedby="contact-modal-description">
+<div class="contact-modal-panel">
+<button class="contact-modal-close" id="contact-modal-close" type="button" aria-label="Fechar janela de contato">
+<span aria-hidden="true">×</span>
+</button>
+<p class="contact-modal-eyebrow">Contato</p>
+<h2 id="contact-modal-title" tabindex="-1">Vamos nos conectar?</h2>
+<p class="contact-modal-description" id="contact-modal-description">Estou aberto a oportunidades, conexões e novos projetos.</p>
+<div class="contact-options">
+<a href="https://www.linkedin.com/in/otavioporteiro" target="_blank" rel="noopener noreferrer" class="contact-option">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"/></svg>
+<span>LinkedIn</span>
+<span class="contact-option-arrow" aria-hidden="true">↗</span>
+</a>
+<a href="https://github.com/otavioporteiro" target="_blank" rel="noopener noreferrer" class="contact-option">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.04c-3.1.67-3.76-1.31-3.76-1.31-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.7 2.61 1.21 3.25.92.1-.72.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.12 2.95.71.78 1.14 1.77 1.14 2.99 0 4.27-2.6 5.21-5.08 5.49.4.35.76 1.03.76 2.08V22c0 .29.2.64.77.53A11.1 11.1 0 0 0 12 .9Z"/></svg>
+<span>GitHub</span>
+<span class="contact-option-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</dialog>
 
 <footer>
-© 2026 Otávio Porteiro | Desenvolvido por mim.
+<p class="footer-name">Otávio Porteiro</p>
+<p>Desenvolvido com propósito, atenção aos detalhes e vontade de construir.</p>
+<p class="footer-copyright">© 2026 · Todos os direitos reservados.</p>
 </footer>
 
 <script>
 
+/* REPOSITION THE SINGLE PROFILE IDENTITY BLOCK */
+const profileIdentity = document.getElementById('profile-identity');
+const headerIdentitySlot = document.getElementById('header-identity-slot');
+const aboutIdentitySlot = document.getElementById('about-identity-slot');
+
+function moveProfileIdentity(tabId) {
+const destination = tabId === 'sobre' ? aboutIdentitySlot : headerIdentitySlot;
+if (profileIdentity && destination && profileIdentity.parentElement !== destination) {
+destination.appendChild(profileIdentity);
+profileIdentity.classList.remove('identity-repositioned');
+void profileIdentity.offsetWidth;
+profileIdentity.classList.add('identity-repositioned');
+}
+}
+
 /* MENU */
 function showTab(tabId){
 
-document.querySelectorAll('.content')
-.forEach(el => el.classList.remove('active'));
+const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+const activePanel = panels.find(panel => panel.id === tabId);
+const activeTab = tabs.find(tab => tab.getAttribute('aria-controls') === tabId);
 
-document.getElementById(tabId)
-.classList.add('active');
-
+if (!activePanel || !activeTab) {
+return false;
 }
 
-/* DIGITAÇÃO */
-const texto = "Otávio Porteiro";
-let i = 0;
-
-function escrever(){
-
-if(i < texto.length){
-
-document.getElementById("nome").innerHTML += texto.charAt(i);
-
-i++;
-
-setTimeout(escrever,100);
-
-}
-
-}
-
-escrever();
-
-/* PARTÍCULAS */
-
-const canvas = document.createElement("canvas");
-const ctx = canvas.getContext("2d");
-
-document.getElementById("particles").appendChild(canvas);
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-
-for(let i=0;i<80;i++){
-
-particles.push({
-
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2+1,
-dx:(Math.random()-0.5),
-dy:(Math.random()-0.5)
-
+panels.forEach(panel => {
+panel.classList.toggle('active', panel === activePanel);
+panel.hidden = panel !== activePanel;
 });
 
-}
-
-function animate(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-particles.forEach(p=>{
-
-ctx.beginPath();
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-ctx.fillStyle="#00ffcc";
-ctx.fill();
-
-p.x+=p.dx;
-p.y+=p.dy;
-
-if(p.x < 0 || p.x > canvas.width)
-p.dx *= -1;
-
-if(p.y < 0 || p.y > canvas.height)
-p.dy *= -1;
-
+tabs.forEach(tab => {
+const isActive = tab === activeTab;
+tab.setAttribute('aria-selected', String(isActive));
+tab.tabIndex = isActive ? 0 : -1;
 });
 
-requestAnimationFrame(animate);
+moveProfileIdentity(tabId);
+return true;
 
 }
 
-animate();
+document.querySelector('[role="tablist"]').addEventListener('keydown', event => {
+const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+const currentIndex = tabs.indexOf(document.activeElement);
+let nextIndex;
 
-window.addEventListener("resize",()=>{
+if (event.key === 'ArrowRight') {
+nextIndex = (currentIndex + 1) % tabs.length;
+} else if (event.key === 'ArrowLeft') {
+nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+} else if (event.key === 'Home') {
+nextIndex = 0;
+} else if (event.key === 'End') {
+nextIndex = tabs.length - 1;
+} else {
+return;
+}
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
+event.preventDefault();
+tabs[nextIndex].focus();
+showTab(tabs[nextIndex].getAttribute('aria-controls'));
 });
+
+/* PROJECT DETAILS */
+const projectInformation = {
+"controle-armarios": {
+name: "Controle de Armários",
+objective: "Gerenciar armários corporativos e acompanhar sua ocupação e movimentações.",
+problem: "Centraliza a consulta da ocupação, das movimentações e das informações de colaboradores e status dos armários.",
+features: [
+"Controle de ocupação dos armários",
+"Acompanhamento de movimentações",
+"Consulta de colaboradores",
+"Acompanhamento de status"
+],
+screenshots: []
+},
+findpet: {
+name: "FindPet",
+objective: "Identificar animais por QR Code e facilitar a conexão entre tutores e comunidade.",
+problem: "Facilita a identificação de pets e a conexão entre tutores e comunidade.",
+features: [
+"Identificação do animal por QR Code",
+"Perfil do pet",
+"Ativação de coleiras",
+"Recursos de conexão entre tutores e comunidade"
+],
+screenshots: []
+},
+"mix-ensaque": {
+name: "Mix de Ensaque",
+objective: "Acompanhar e fechar a produção com consulta de OPs, informações produtivas e controle de perdas.",
+problem: "Reúne informações de OPs, produção e perdas para apoiar o acompanhamento e o fechamento da produção.",
+features: [
+"Consulta de OPs",
+"Consulta de informações de produção",
+"Controle de perdas",
+"Acompanhamento e fechamento da produção"
+],
+screenshots: []
+}
+};
+
+const projectModal = document.getElementById("project-modal");
+const projectModalTitle = document.getElementById("project-modal-title");
+const projectModalContent = document.getElementById("project-modal-content");
+const armariosTransformation = document.getElementById("armarios-transformation");
+const armariosEvolution = document.getElementById("armarios-evolution");
+const projectModalGallery = document.getElementById("project-modal-gallery");
+const projectGalleryGrid = document.getElementById("project-gallery-grid");
+const projectModalClose = document.getElementById("project-modal-close");
+let projectModalOpener = null;
+
+function createProjectDetail(label, value, className = "") {
+if (!value || (Array.isArray(value) && value.length === 0)) {
+return null;
+}
+
+const section = document.createElement("section");
+section.className = `project-detail-block ${className}`.trim();
+
+const heading = document.createElement("h3");
+heading.textContent = label;
+section.appendChild(heading);
+
+if (Array.isArray(value)) {
+const list = document.createElement("ul");
+value.forEach(item => {
+const listItem = document.createElement("li");
+listItem.textContent = item;
+list.appendChild(listItem);
+});
+section.appendChild(list);
+} else {
+const paragraph = document.createElement("p");
+paragraph.textContent = value;
+section.appendChild(paragraph);
+}
+
+return section;
+}
+
+function renderProjectGallery(screenshots) {
+projectGalleryGrid.replaceChildren();
+
+screenshots.forEach(screenshot => {
+if (!screenshot.src || !screenshot.alt) {
+return;
+}
+
+const figure = document.createElement("figure");
+figure.className = "project-gallery-item";
+
+const image = document.createElement("img");
+image.src = screenshot.src;
+image.alt = screenshot.alt;
+image.loading = "lazy";
+figure.appendChild(image);
+
+if (screenshot.caption) {
+const caption = document.createElement("figcaption");
+caption.textContent = screenshot.caption;
+figure.appendChild(caption);
+}
+
+projectGalleryGrid.appendChild(figure);
+});
+
+projectModalGallery.hidden = projectGalleryGrid.childElementCount === 0;
+}
+
+function openProjectModal(projectId, opener) {
+const project = projectInformation[projectId];
+if (!project || projectModal.open) {
+return false;
+}
+
+projectModalOpener = opener;
+projectModalTitle.textContent = project.name;
+armariosTransformation.hidden = projectId !== "controle-armarios";
+armariosEvolution.hidden = projectId !== "controle-armarios";
+projectModalContent.replaceChildren();
+
+[
+["Objetivo", project.objective, ""],
+["Problema que resolve", project.problem, ""],
+["Funcionalidades conhecidas", project.features, "project-detail-block-wide"],
+["Tecnologias confirmadas", project.technologies, ""],
+["Status do desenvolvimento", project.status, ""]
+].forEach(([label, value, className]) => {
+const detail = createProjectDetail(label, value, className);
+if (detail) {
+projectModalContent.appendChild(detail);
+}
+});
+
+renderProjectGallery(project.screenshots || []);
+projectModal.showModal();
+projectModalTitle.focus();
+return true;
+}
+
+document.querySelectorAll(".project-card-action[data-project-id]").forEach(button => {
+button.addEventListener("click", () => {
+openProjectModal(button.dataset.projectId, button);
+});
+});
+
+projectModalClose.addEventListener("click", () => projectModal.close());
+
+projectModal.addEventListener("click", event => {
+if (event.target === projectModal) {
+projectModal.close();
+}
+});
+
+projectModal.addEventListener("close", () => {
+if (projectModalOpener && projectModalOpener.isConnected) {
+projectModalOpener.focus();
+}
+projectModalOpener = null;
+});
+
+/* CONTACT DIALOG */
+const contactModal = document.getElementById("contact-modal");
+const contactModalTitle = document.getElementById("contact-modal-title");
+const contactModalOpen = document.getElementById("contact-open");
+const contactModalClose = document.getElementById("contact-modal-close");
+let contactModalOpener = null;
+
+contactModalOpen.addEventListener("click", event => {
+contactModalOpener = event.currentTarget;
+contactModal.showModal();
+contactModalTitle.focus();
+});
+
+contactModalClose.addEventListener("click", () => contactModal.close());
+
+contactModal.addEventListener("click", event => {
+if (event.target === contactModal) {
+contactModal.close();
+}
+});
+
+contactModal.addEventListener("close", () => {
+if (contactModalOpener && contactModalOpener.isConnected) {
+contactModalOpener.focus();
+}
+contactModalOpener = null;
+});
+
+/* ABOUT SECTION REVEAL */
+const aboutSection = document.getElementById("sobre");
+if ("IntersectionObserver" in window && aboutSection) {
+const aboutObserver = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+aboutSection.classList.add("is-visible");
+aboutObserver.unobserve(aboutSection);
+}
+});
+});
+aboutSection.classList.add("about-motion-ready");
+aboutObserver.observe(aboutSection);
+}
 
 </script>
 
