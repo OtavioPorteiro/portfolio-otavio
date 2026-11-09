@@ -59,16 +59,41 @@ Entrar em contato <span aria-hidden="true">↗</span>
 
 <h2>Projetos em Destaque</h2>
 
-<article class="project-card">
+<article class="project-card featured-project-card">
 <div class="project-card-heading">
 <span class="project-index" aria-hidden="true">01</span>
 <span class="project-category">Gestão de armários</span>
 </div>
-<div class="project-card-content">
+<figure class="locker-project-art" aria-labelledby="locker-art-caption">
+<div class="locker-art-heading">
+<span class="locker-art-mark" aria-hidden="true">CA</span>
+<span class="locker-art-label">GESTÃO INDUSTRIAL</span>
+<span class="locker-art-detail">01 / 03</span>
+</div>
+<div class="locker-art-content">
+<div class="locker-art-copy">
+<p>CONTROLE DE ARMÁRIOS</p>
+<strong>Organização<br>em um só lugar.</strong>
+</div>
+<div class="locker-bank" aria-hidden="true">
+<span class="locker-door locker-door-large"><i></i><i></i></span>
+<span class="locker-door"><i></i><i></i></span>
+<span class="locker-door"><i></i><i></i></span>
+<span class="locker-door locker-door-accent"><i></i><i></i></span>
+<span class="locker-door"><i></i><i></i></span>
+<span class="locker-door"><i></i><i></i></span>
+</div>
+</div>
+<figcaption id="locker-art-caption">Identidade visual do projeto · composição conceitual, sem captura de tela.</figcaption>
+</figure>
+<div class="project-card-content featured-project-content">
 <h3>Controle de Armários</h3>
-<p class="project-description">Sistema de gestão de armários corporativos, com controle de ocupação, movimentações, consulta de colaboradores e acompanhamento de status.</p>
-<ul class="project-technologies" aria-label="Versão atual do projeto"><li>Sistema web</li></ul>
+<p class="project-description">Uma solução digital para centralizar informações, acompanhar ocupações e organizar movimentações em uma única plataforma.</p>
+<ul class="project-technologies" aria-label="Tecnologias do projeto"><li>React</li><li>TypeScript</li><li>Vite</li><li>Excel</li></ul>
+<div class="featured-project-actions">
+<a class="featured-project-link" href="https://exquisite-blini-84475d.netlify.app/" target="_blank" rel="noopener noreferrer">Acessar sistema <span aria-hidden="true">↗</span></a>
 <button type="button" class="project-card-action" aria-label="Conhecer projeto Controle de Armários" aria-haspopup="dialog" aria-controls="project-modal" data-project-id="controle-armarios">Conhecer projeto <span aria-hidden="true">→</span></button>
+</div>
 </div>
 </article>
 
@@ -107,6 +132,15 @@ Entrar em contato <span aria-hidden="true">↗</span>
 </button>
 <p class="project-modal-eyebrow">Detalhes do projeto</p>
 <h2 id="project-modal-title" tabindex="-1"></h2>
+<section class="armarios-overview" id="armarios-overview" aria-label="Apresentação do Controle de Armários" hidden>
+<p class="armarios-overview-intro">Um projeto independente desenvolvido para demonstrar como a tecnologia pode simplificar processos de organização e gestão.</p>
+<div class="armarios-overview-grid">
+<section><h3>O desafio</h3><p>Organizar informações de armários, colaboradores e movimentações de forma clara, reduzindo a dependência de controles dispersos.</p></section>
+<section><h3>A solução</h3><p>Uma aplicação web que centraliza o acompanhamento dos armários, permite registrar movimentações e disponibiliza indicadores para facilitar a gestão.</p></section>
+<section class="armarios-overview-wide"><h3>Tecnologias utilizadas</h3><ul class="armarios-tech-list"><li>React</li><li>TypeScript</li><li>Vite</li><li>JavaScript</li><li>Excel</li></ul></section>
+<section class="armarios-overview-wide armarios-access"><div><h3>Acesso</h3><p>Explore a demonstração pública do sistema.</p></div><a href="https://exquisite-blini-84475d.netlify.app/" target="_blank" rel="noopener noreferrer">Acessar sistema <span aria-hidden="true">↗</span></a></section>
+</div>
+</section>
 <section class="process-transformation" id="armarios-transformation" aria-labelledby="armarios-transformation-title" hidden>
 <h3 id="armarios-transformation-title">A transformação do processo</h3>
 <p class="process-introduction">Antes do sistema, o controle era feito em uma planilha desorganizada, o que dificultava consultar, organizar e acompanhar as informações. O Controle de Armários foi desenvolvido para melhorar esse processo.</p>
@@ -332,6 +366,7 @@ screenshots: []
 const projectModal = document.getElementById("project-modal");
 const projectModalTitle = document.getElementById("project-modal-title");
 const projectModalContent = document.getElementById("project-modal-content");
+const armariosOverview = document.getElementById("armarios-overview");
 const armariosTransformation = document.getElementById("armarios-transformation");
 const armariosEvolution = document.getElementById("armarios-evolution");
 const projectModalGallery = document.getElementById("project-modal-gallery");
@@ -405,6 +440,8 @@ return false;
 
 projectModalOpener = opener;
 projectModalTitle.textContent = project.name;
+armariosOverview.hidden = projectId !== "controle-armarios";
+projectModalContent.hidden = projectId === "controle-armarios";
 armariosTransformation.hidden = projectId !== "controle-armarios";
 armariosEvolution.hidden = projectId !== "controle-armarios";
 projectModalContent.replaceChildren();

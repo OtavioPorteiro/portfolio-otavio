@@ -1244,3 +1244,449 @@ footer p {
         padding: 13px;
     }
 }
+
+/* Featured project: Controle de Armários */
+.featured-project-card {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+    border-color: #244A43;
+    background: #172B2A;
+    color: #F7F8F5;
+    box-shadow: 0 12px 32px rgba(23, 43, 42, 0.13);
+}
+
+.featured-project-card:hover,
+.featured-project-card:focus-within {
+    border-color: #397568;
+    box-shadow: 0 16px 38px rgba(23, 43, 42, 0.2);
+}
+
+.featured-project-card .project-card-heading {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 24px 30px 0;
+}
+
+.featured-project-card .project-index {
+    background: #244A43;
+    color: #D5A45B;
+}
+
+.featured-project-card .project-category {
+    color: #C5D3CE;
+}
+
+.locker-project-art {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    min-height: 310px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 0 28px 30px;
+    overflow: hidden;
+    padding: 22px;
+    border: 1px solid rgba(228, 234, 229, 0.16);
+    border-radius: 14px;
+    background: radial-gradient(ellipse at 78% 20%, rgba(57, 117, 104, 0.36), transparent 45%), linear-gradient(145deg, #203D39, #172B2A 72%);
+}
+
+.locker-project-art::after {
+    position: absolute;
+    right: -50px;
+    bottom: -86px;
+    width: 210px;
+    height: 210px;
+    border: 1px solid rgba(213, 164, 91, 0.2);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.locker-art-heading,
+.locker-art-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.locker-art-mark {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid rgba(213, 164, 91, 0.48);
+    border-radius: 11px;
+    color: #E9C88F;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.locker-art-label,
+.locker-art-detail {
+    color: #D5E0DC;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.locker-art-detail {
+    margin-left: auto;
+    color: #D5A45B;
+}
+
+.locker-art-content {
+    align-items: flex-end;
+    gap: 18px;
+}
+
+.locker-art-copy {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+}
+
+.locker-art-copy p {
+    margin: 0 0 8px;
+    color: #D5A45B;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.locker-art-copy strong {
+    display: block;
+    color: #F7F8F5;
+    font-size: clamp(1.3rem, 2.4vw, 2rem);
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 1.16;
+}
+
+.locker-bank {
+    display: grid;
+    width: min(46%, 190px);
+    flex: 0 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+    transform: perspective(450px) rotateY(-10deg) rotateZ(2deg);
+}
+
+.locker-door {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    aspect-ratio: 0.68;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid rgba(228, 234, 229, 0.25);
+    border-radius: 4px;
+    background: linear-gradient(145deg, #397568, #244A43);
+    box-shadow: inset 3px 0 rgba(255, 255, 255, 0.035), 3px 3px 0 rgba(11, 24, 22, 0.3);
+}
+
+.locker-door:nth-child(2),
+.locker-door:nth-child(5) {
+    background: linear-gradient(145deg, #315E55, #203F3A);
+}
+
+.locker-door-accent {
+    border-color: rgba(213, 164, 91, 0.66);
+}
+
+.locker-door i:first-child {
+    width: 6px;
+    height: 6px;
+    border: 1px solid #D5A45B;
+    border-radius: 50%;
+}
+
+.locker-door i:last-child {
+    width: 2px;
+    height: 14px;
+    border-radius: 2px;
+    background: rgba(228, 234, 229, 0.5);
+}
+
+.locker-project-art figcaption {
+    position: relative;
+    z-index: 1;
+    margin-top: 14px;
+    color: #B9C9C3;
+    font-size: 0.68rem;
+    line-height: 1.5;
+}
+
+.featured-project-content {
+    justify-content: center;
+    padding: 24px clamp(24px, 4vw, 44px) 28px;
+}
+
+.featured-project-card .project-card-content h3 {
+    margin-bottom: 10px;
+    color: #F7F8F5;
+    font-size: clamp(1.45rem, 2.3vw, 1.85rem);
+}
+
+.featured-project-card .project-description {
+    max-width: 48ch;
+    color: #D5E0DC;
+    font-size: 0.93rem;
+}
+
+.featured-project-card .project-technologies {
+    margin-top: 20px;
+}
+
+.featured-project-card .project-technologies li {
+    border-color: rgba(228, 234, 229, 0.2);
+    background: #244A43;
+    color: #F0F4F1;
+}
+
+.featured-project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 22px;
+    margin-top: 24px;
+}
+
+.featured-project-link {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 10px 17px;
+    border: 1px solid #397568;
+    border-radius: 8px;
+    background: #397568;
+    color: #FFFFFF;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.featured-project-link:hover {
+    transform: translateY(-1px);
+    border-color: #4A8C7E;
+    background: #2F685D;
+}
+
+.featured-project-link:focus-visible,
+.featured-project-card .project-card-action:focus-visible,
+.armarios-access a:focus-visible {
+    outline: 3px solid #D5A45B;
+    outline-offset: 3px;
+}
+
+.featured-project-card .project-card-action {
+    min-height: 46px;
+    margin: 0;
+    color: #E9C88F;
+    text-decoration-color: transparent;
+}
+
+.featured-project-card .project-card-action:hover,
+.featured-project-card .project-card-action:focus-visible {
+    color: #F5D9A6;
+    text-decoration-color: currentColor;
+}
+
+/* Conteúdo exclusivo do modal deste projeto */
+.armarios-overview {
+    margin: -2px 0 22px;
+    padding: clamp(20px, 4vw, 30px);
+    border: 1px solid #244A43;
+    border-radius: 14px;
+    background: #172B2A;
+    color: #F7F8F5;
+}
+
+.armarios-overview-intro {
+    max-width: 66ch;
+    margin: 0 0 22px;
+    color: #D5E0DC;
+    font-size: 0.94rem;
+    line-height: 1.75;
+}
+
+.armarios-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.armarios-overview-grid > section {
+    min-width: 0;
+    padding: 16px 17px;
+    border: 1px solid rgba(228, 234, 229, 0.15);
+    border-radius: 9px;
+    background: rgba(36, 74, 67, 0.62);
+}
+
+.armarios-overview-grid h3 {
+    margin: 0 0 7px;
+    color: #E9C88F;
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.armarios-overview-grid p {
+    color: #E3EBE7;
+    font-size: 0.83rem;
+    line-height: 1.7;
+}
+
+.armarios-overview-wide {
+    grid-column: 1 / -1;
+}
+
+.armarios-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.armarios-tech-list li {
+    padding: 5px 10px;
+    border: 1px solid rgba(228, 234, 229, 0.2);
+    border-radius: 999px;
+    color: #F7F8F5;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.armarios-access {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.armarios-access a {
+    display: inline-flex;
+    min-height: 42px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 7px;
+    background: #397568;
+    color: #FFFFFF;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.armarios-access a:hover {
+    background: #2F685D;
+}
+
+@media (max-width: 700px) {
+    .featured-project-card {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .featured-project-card .project-card-heading {
+        padding: 21px 21px 0;
+    }
+
+    .locker-project-art {
+        min-height: 280px;
+        margin: 18px 20px 0;
+        padding: 18px;
+    }
+
+    .featured-project-content {
+        padding: 24px 21px 25px;
+    }
+}
+
+@media (max-width: 440px) {
+    .locker-project-art {
+        min-height: 250px;
+        margin-inline: 14px;
+        padding: 15px;
+    }
+
+    .locker-art-content {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .locker-bank {
+        width: 43%;
+        gap: 3px;
+    }
+
+    .locker-door i:last-child {
+        height: 10px;
+    }
+
+    .featured-project-content {
+        padding-inline: 18px;
+    }
+
+    .featured-project-actions,
+    .armarios-access {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .featured-project-link,
+    .armarios-access a {
+        width: 100%;
+    }
+
+    .armarios-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .armarios-overview-wide {
+        grid-column: auto;
+    }
+}
+
+/* Mantém os outros projetos em cartões paralelos após o destaque */
+.featured-project-card ~ .project-card {
+    grid-column: auto;
+    min-height: 270px;
+}
+
+.featured-project-card ~ .project-card .project-card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.featured-project-card ~ .project-card h3 {
+    margin: 0 0 9px;
+}
+
+@media (max-width: 700px) {
+    .featured-project-card ~ .project-card {
+        grid-column: auto;
+        min-height: 0;
+    }
+}
