@@ -1680,6 +1680,355 @@ footer p {
     gap: 0;
 }
 
+/* FindPet presentation, using the official project palette */
+.findpet-card {
+    --color-primary: #2F241E;
+    --color-text: #2F241E;
+    --color-secondary-text: #71675F;
+    --color-muted: #8A684D;
+    --color-bg: #F8F7F3;
+    --color-surface: #FFFFFF;
+    --color-border: #E1E5DC;
+    --color-border-rgb: 225, 229, 220;
+    --color-beige: #AFC69F;
+    --color-beige-light: #F0F2EB;
+    --color-accent: #45624B;
+    --color-accent-hover: #354D3B;
+    --color-accent-text: #45624B;
+    --color-button-text: #FFFFFF;
+    --color-accent-rgb: 69, 98, 75;
+    position: relative;
+    overflow: hidden;
+    border-color: var(--color-border);
+    background: linear-gradient(155deg, #FFFFFF 42%, var(--color-beige-light));
+    color: var(--color-text);
+    box-shadow: 0 5px 18px rgba(47, 36, 30, 0.06);
+}
+
+.findpet-card:hover,
+.findpet-card:focus-within {
+    border-color: #AFC69F;
+    box-shadow: 0 10px 26px rgba(69, 98, 75, 0.12);
+}
+
+.findpet-card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--color-accent), var(--color-beige));
+    content: "";
+}
+
+.findpet-card .project-index {
+    background: var(--color-beige-light);
+}
+
+.findpet-card .project-card-content {
+    align-items: flex-start;
+}
+
+.findpet-card .project-card-content h3 {
+    margin-top: 22px;
+}
+
+.findpet-card-art {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 112px;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+    padding: 18px;
+    border: 1px solid rgba(var(--color-accent-rgb), 0.16);
+    border-radius: 12px;
+    background: radial-gradient(circle at 90% 0%, rgba(var(--color-accent-rgb), 0.15), transparent 38%), linear-gradient(120deg, var(--color-beige-light), #FFFFFF 72%);
+}
+
+.findpet-orbit {
+    position: absolute;
+    right: -19px;
+    width: 112px;
+    height: 112px;
+    border: 1px solid rgba(var(--color-accent-rgb), 0.2);
+    border-radius: 50%;
+}
+
+.findpet-orbit-one { right: -3px; }
+.findpet-orbit-two { right: -30px; width: 160px; height: 160px; }
+
+.findpet-art-mark {
+    z-index: 1;
+    display: grid;
+    width: 54px;
+    height: 54px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid rgba(var(--color-accent-rgb), 0.42);
+    border-radius: 18px 18px 18px 5px;
+    background: #FFFFFF;
+    color: var(--color-accent-text);
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    box-shadow: 0 5px 15px rgba(var(--color-accent-rgb), 0.1);
+}
+
+.findpet-art-label,
+.findpet-art-code {
+    z-index: 1;
+    color: var(--color-secondary-text);
+    font-size: 0.64rem;
+    font-weight: 750;
+    letter-spacing: 0.09em;
+}
+
+.findpet-art-code {
+    margin-left: auto;
+    color: var(--color-accent-text);
+    font-size: 0.58rem;
+    white-space: nowrap;
+}
+
+.findpet-card .project-technologies { margin-top: 16px; }
+
+.findpet-actions {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 18px;
+    margin-top: auto;
+    padding-top: 18px;
+}
+
+.findpet-access,
+.findpet-modal-access a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border: 1px solid var(--color-accent);
+    border-radius: 8px;
+    background: var(--color-accent);
+    color: #FFFFFF;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.findpet-access:hover,
+.findpet-modal-access a:hover {
+    transform: translateY(-1px);
+    background: var(--color-accent-hover);
+}
+
+.findpet-access:focus-visible,
+.findpet-modal-access a:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.findpet-actions .project-card-action { margin-top: 0; }
+
+.findpet-overview {
+    --color-primary: #2F241E;
+    --color-text: #2F241E;
+    --color-secondary-text: #71675F;
+    --color-muted: #8A684D;
+    --color-bg: #F8F7F3;
+    --color-surface: #FFFFFF;
+    --color-border: #E1E5DC;
+    --color-border-rgb: 225, 229, 220;
+    --color-beige: #AFC69F;
+    --color-beige-light: #F0F2EB;
+    --color-accent: #45624B;
+    --color-accent-hover: #354D3B;
+    --color-accent-text: #45624B;
+    --color-button-text: #FFFFFF;
+    --color-accent-rgb: 69, 98, 75;
+    margin: -2px 0 22px;
+    padding: clamp(20px, 4vw, 30px);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: linear-gradient(155deg, #FFFFFF 44%, var(--color-beige-light));
+}
+
+.findpet-modal-tagline {
+    margin: 0 0 8px;
+    color: var(--color-accent-text);
+    font-size: 0.75rem;
+    font-weight: 750;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.findpet-overview-intro {
+    max-width: 68ch;
+    margin: 0 0 22px;
+    color: var(--color-secondary-text);
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.findpet-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.findpet-overview-grid > section {
+    min-width: 0;
+    padding: 17px;
+    border: 1px solid rgba(var(--color-border-rgb), 0.95);
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.82);
+}
+
+.findpet-overview-grid h3 {
+    margin: 0 0 8px;
+    color: var(--color-accent-text);
+    font-size: 0.74rem;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.findpet-overview-grid p,
+.findpet-overview-grid li {
+    color: var(--color-secondary-text);
+    font-size: 0.83rem;
+    line-height: 1.7;
+}
+
+.findpet-section-number {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--color-muted);
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.findpet-features,
+.findpet-tech,
+.findpet-modal-access { grid-column: 1 / -1; }
+
+.findpet-features ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px 20px;
+    margin: 0;
+    padding-left: 18px;
+}
+
+.findpet-overview-grid .findpet-feature-note {
+    margin: 12px 0 0;
+    font-size: 0.72rem;
+    font-style: italic;
+}
+
+.findpet-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.findpet-tech-list li {
+    padding: 5px 10px;
+    border: 1px solid rgba(var(--color-accent-rgb), 0.22);
+    border-radius: 999px;
+    background: var(--color-beige-light);
+    color: var(--color-accent-text);
+    font-size: 0.75rem;
+    font-weight: 650;
+}
+
+.findpet-modal-access {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.findpet-modal-access p { margin: 0; }
+
+.findpet-brand {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    white-space: nowrap;
+    font-weight: 800 !important;
+    letter-spacing: -0.055em !important;
+}
+
+.findpet-brand span:first-child { color: #2F241E; }
+.findpet-brand span:last-child { color: #45624B; }
+
+.findpet-art-mark.findpet-brand {
+    width: auto;
+    height: auto;
+    flex: 0 0 auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    font-size: 1.05rem;
+}
+
+#project-modal-title.findpet-brand {
+    display: flex;
+    max-width: calc(100% - 48px);
+    margin-bottom: 28px;
+    color: #2F241E;
+    font-size: clamp(1.65rem, 4vw, 2.35rem);
+}
+
+.findpet-modal-brand {
+    margin: 0 0 12px;
+    font-size: 1.12rem;
+    line-height: 1.2;
+}
+
+#project-modal.findpet-project-modal {
+    border-color: #E1E5DC;
+}
+
+#project-modal.findpet-project-modal .project-modal-eyebrow {
+    color: #45624B;
+}
+
+#project-modal.findpet-project-modal .project-modal-close:hover {
+    border-color: #45624B;
+    background: #F0F2EB;
+    color: #354D3B;
+}
+
+#project-modal.findpet-project-modal .project-modal-close:focus-visible {
+    outline-color: #45624B;
+}
+
+@media (max-width: 440px) {
+    .findpet-card-art { min-height: 98px; gap: 10px; padding: 14px; }
+    .findpet-art-label { max-width: 100px; font-size: 0.58rem; }
+    .findpet-art-code { font-size: 0.52rem; }
+    .findpet-actions { align-items: stretch; flex-direction: column; }
+    .findpet-access { width: 100%; }
+    .findpet-overview-grid { grid-template-columns: 1fr; }
+    .findpet-features ul { grid-template-columns: 1fr; }
+    .findpet-features, .findpet-tech, .findpet-modal-access { grid-column: auto; }
+    .findpet-modal-access { align-items: stretch; flex-direction: column; }
+    .findpet-modal-access a { width: 100%; }
+}
+
 .featured-project-card ~ .project-card h3 {
     margin: 0 0 9px;
 }
